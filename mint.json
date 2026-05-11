@@ -2,10 +2,10 @@
   "name": "Gacky-X",
   "theme": "prism",
   "logo": {
-    "light": "/logo/light.png",
-    "dark": "/logo/dark.png"
+    "light": "/images/logo-light.gif",
+    "dark": "/images/logo-dark.gif"
   },
-  "favicon": "/favicon.png",
+  "favicon": "/images/favicon.png",
   "colors": {
     "primary": "#af05f7",
     "light": "#cf48fb",
