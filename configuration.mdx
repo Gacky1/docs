@@ -1,0 +1,52 @@
+---
+title: "Configuration"
+description: "Master the Gacky-X setup and configuration dashboards."
+---
+
+## Interactive Setup
+
+Gacky-X is designed around dashboards. Instead of typing dozens of commands, you can manage your server through the **Setup Hub**.
+
+### The Setup Hub (`-setup`)
+
+Run `-setup` to open the central deployment dashboard. From here, you can:
+1.  **Initialize Logs:** Deploy 7+ surveillance channels instantly.
+2.  **Activate Shield:** Enable recommended security presets for Antinuke and Automod.
+3.  **Manage Access:** View commands to set up your Staff and Admin roles.
+
+## Core Configuration
+
+### Global Configuration (`-config`)
+The main settings panel for general bot behavior, including language, prefix (future support), and punishment defaults.
+
+### Logging Deployment (`-logs`)
+Gacky-X provides industry-leading audit trails. We recommend using the **Auto-Setup** feature:
+1.  Run `-logs`
+2.  Click **Auto-Setup**
+3.  The bot will create a category named `GACKY LOGS` and configure 7 channels for Messages, Members, Mod-Actions, Security, Server, and Voice activity.
+
+## Engagement Setup
+
+### Welcome Module (`-welcome`)
+Configure how new members are greeted when they join the server.
+*   **Features:** Custom message templates, channel binding, and image support.
+*   **Usage:** `-welcome` to open the panel.
+
+### Greet Module (`-greet`)
+Short, temporary greetings in active chat channels to engage new members immediately.
+*   **Features:** Automatic message deletion (to keep chat clean) and channel whitelisting.
+*   **Usage:** `-greet` to open the panel.
+
+## Recommended First Config
+
+| Setting | Recommended Value |
+| :--- | :--- |
+| **Punishment Default** | `TIMEOUT` |
+| **Log Severity** | `INFO` |
+| **Antinuke Status** | `ENABLED` |
+| **Auto-Restore** | `ENABLED` (Requires backups) |
+| **AI Moderation** | `FLAG-ONLY` (For the first 24 hours) |
+
+<Note>
+  Changing core settings like `defaultPunishment` will affect both AutoMod and basic moderation commands.
+</Note>

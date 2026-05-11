@@ -1,0 +1,46 @@
+---
+title: "Security Registry"
+description: "Managing the chain of command within Gacky-X."
+---
+
+Gacky-X uses a multi-tier trust system to ensure that even if one staff member is compromised, your server remains safe.
+
+## Trust Tiers
+
+### 👑 Server Owner
+- **Trust Level:** Absolute.
+- **Permissions:** Can manage everything, including Extra Owners.
+- **Bypasses:** Bypasses all bot protocols automatically.
+
+### 🛡️ Extra Owners (`-extraowner`)
+- **Trust Level:** High Council.
+- **Usage:** Use for co-owners and founders.
+- **Capabilities:** Can manage Security Admins and all bot settings.
+- **Bypasses:** Bypasses AutoMod filters but is **monitored** by Antinuke.
+
+### 👮 Security Admins (`-admin`)
+- **Trust Level:** Staff.
+- **Usage:** Use for your head moderators and admins.
+- **Capabilities:** Can configure the bot dashboards and use moderation tools.
+- **Bypasses:** Bypasses AutoMod but is **strictly monitored** by Antinuke.
+
+## The Whitelist System
+
+If a trusted admin needs to perform many actions (like creating 10 channels for an event), they will trigger the Antinuke unless they are **Whitelisted**.
+
+1.  Run **`-whitelist`**.
+2.  Select the user or role.
+3.  Toggle the specific permission they need (e.g., `Chan Create`).
+4.  They can now perform that specific action without being banned.
+
+## Admin Cleanup
+
+Staff members leave or get demoted. To keep your bot's memory clean, use:
+```txt
+-admin cleanup
+```
+This scans your registry and removes anyone who is no longer in the server.
+
+<Note>
+  **Pro-Tip:** Never whitelist someone for "ALL" permissions unless they are a co-owner. Use granular whitelisting to keep your server "Bulletproof."
+</Note>

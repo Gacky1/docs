@@ -1,0 +1,74 @@
+{
+  "name": "Gacky-X",
+  "theme": "prism",
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#af05f7",
+    "light": "#cf48fb",
+    "dark": "#af05f7"
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "https://discord.gg/dEAu566Xxg"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Invite Bot",
+    "url": "https://discord.com/api/oauth2/authorize?client_id=1434481411892707328&permissions=8&scope=bot"
+  },
+  "navigation": [
+    {
+      "group": "Start Here",
+      "pages": [
+        "index",
+        "getting-started",
+        "permissions",
+        "configuration"
+      ]
+    },
+    {
+      "group": "Commands",
+      "pages": [
+        "commands/antinuke",
+        "commands/automod",
+        "commands/moderation",
+        "commands/logging",
+        "commands/security",
+        "commands/setup-customization",
+        "commands/utility",
+        "commands/backup",
+        "commands/owner",
+        "commands/voice",
+        "commands/autorole",
+        "commands/verification"
+      ]
+    },
+    {
+      "group": "Guides",
+      "pages": [
+        "guides/first-setup",
+        "guides/security-registry",
+        "guides/antinuke-protocols",
+        "guides/automod-ai",
+        "guides/advanced-moderation",
+        "guides/custombot-profile",
+        "guides/troubleshooting"
+      ]
+    },
+    {
+      "group": "Help",
+      "pages": [
+        "faq"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "discord": "https://discord.gg/dEAu566Xxg",
+    "website": "https://gacky.xyz"
+  }
+}

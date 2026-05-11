@@ -1,0 +1,42 @@
+---
+title: "Antinuke Protocols"
+description: "Advanced protection against mass-destructive actions."
+---
+
+The Antinuke system is a "Machine-Gun" defense: it tracks frequency and confidence to stop attackers instantly.
+
+## How it Works
+
+The bot monitors 12+ different "Nuke" actions, including:
+- Channel Deletion / Creation
+- Role Deletion / Creation / Permission Updates
+- Member Bans / Kicks
+- Webhook Manipulation
+- Emoji / Invite Spam
+
+## Sensitivity & Thresholds
+
+Every server is different. A community of 100,000 members might need higher limits than a server of 50.
+
+1.  Type **`-thresholds`**.
+2.  Click a specific action (e.g., `Member Bans`).
+3.  Set the limit. For example, if set to `3`, the bot will ban anyone who bans 3 people within 10 seconds.
+
+## Recovery Systems
+
+### Auto-Restore
+If an unauthorized admin deletes a channel, Gacky-X can **instantly recreate it** using your latest backup data.
+- **Requirement:** You must have a recent snapshot created via `-backup create`.
+- **Status:** Can be enabled in the `-antinuke` dashboard.
+
+### Panic Mode
+If your server is under a coordinated attack, use **`-panicmode enable`**.
+- **Effect:** The bot will instantly lock down all text channels and remove permissions from every role except the Owner.
+
+## Confidence-First Protocol
+
+To prevent "False Bans," Gacky-X uses a retry-logic system.
+1.  Bot detects a deletion.
+2.  Bot checks Audit Logs.
+3.  If Discord API is lagging, the bot **waits and retries** up to 3 times.
+4.  If it still cannot confirm the executor, it logs a **Suspicious Event** warning instead of banning an innocent user.

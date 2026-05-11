@@ -1,0 +1,41 @@
+---
+title: "Setup & Customization"
+description: "Personalize Gacky-X for your community's identity."
+---
+
+## Setup Hub (`-setup`)
+
+The entry point for all server administrators. Use this hub to deploy your first log channels, roles, and security presets.
+
+## Custom Bot Profile (`-custombot`) ⭐
+
+Customize how Gacky-X appears inside **this server only**. This is a premium-tier feature using Discord's official Modify Current Member API.
+
+- **Usage:** `-custombot` (or `-cbot`)
+- **Customizable Fields:**
+    - **Nickname:** Set a server-specific display name.
+    - **Avatar:** Upload a unique profile picture for your server.
+    - **Banner:** Set a custom profile banner.
+    - **Bio:** Add a custom "About Me" visible in this server's member list.
+
+<Tip>
+  You can set avatars and banners via the interactive panel (URL) or by attaching an image to the command: `-custombot avatar [attachment]`.
+</Tip>
+
+## Automated Greetings
+
+### Welcome Module (`-welcome`)
+Configure permanent entrance greetings.
+- **Variables:** `{userMention}`, `{server}`, `{memberCount}`.
+- **Support:** Custom messages and image backgrounds.
+
+### Greet Module (`-greet`)
+Short, temporary welcomes in active channels.
+- **Usage:** `-greet` to manage active channels.
+- **Feature:** Automatically deletes the greeting after a set time to keep chat clean.
+
+## Personalization
+
+### Branded Embeds (`-embed`)
+Use our OS-style builder to design and broadcast professional, branded embeds for your server announcements.
+- **Usage:** `-embed` (or `-eb`).

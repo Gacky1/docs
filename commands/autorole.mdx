@@ -1,0 +1,26 @@
+---
+title: "Autorole System"
+description: "Automatically assign roles to new members and bots."
+---
+
+Manage role assignments for users joining your community.
+
+## Configuration Dashboard (`-autorole`)
+
+Use the interactive dashboard to manage automated role groups.
+
+### Features
+- **Human Roles:** Roles assigned only to regular users.
+- **Bot Roles:** Roles assigned only to newly invited bots.
+- **Selective Removal:** Automatically remove specific roles when a user leaves or changes state.
+
+## CLI Usage
+
+For power users, you can use direct subcommands:
+- **`-autorole add humans @Role`**
+- **`-autorole remove humans @Role`**
+- **`-autorole show`**
+
+<Note>
+  **Hierarchy Note:** Gacky-X can only assign roles that are **below** its own highest role in the Server Settings.
+</Note>

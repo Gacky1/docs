@@ -1,0 +1,34 @@
+---
+title: "FAQ"
+description: "Frequently asked questions about Gacky-X."
+---
+
+<AccordionGroup>
+  <Accordion title="Is Gacky-X slash or prefix based?">
+    Gacky-X is strictly **prefix-based**. We use the **`-`** prefix to ensure high-performance execution and stability. Dashboards are handled via modern stateless components (V2) but are triggered via prefix commands.
+  </Accordion>
+
+  <Accordion title="Why does the bot need Administrator permission?">
+    Gacky-X is a security bot. To stop "Nukes" (mass deletion of channels or roles), it needs to be able to recreate channels and manage permissions instantly. While not strictly required, **Administrator** is highly recommended for the Antinuke system to work perfectly.
+  </Accordion>
+
+  <Accordion title="Can AI moderation ban users automatically?">
+    **No.** For safety reasons, Gacky-X AI Moderation defaults to **Flag-Only** mode. Even if set to strict actions, it will only perform **Timeouts** or **Deletions**. It will never Ban or Kick a user automatically based on AI analysis.
+  </Accordion>
+
+  <Accordion title="Can I change the bot's profile per server?">
+    **Yes!** Using the premium `-custombot` command, you can change the bot's nickname, avatar, banner, and bio **inside your specific server**. This will not affect how it looks in other communities.
+  </Accordion>
+
+  <Accordion title="Why did the Antinuke skip a punishment?">
+    If the bot detects a suspicious event but cannot "reliably" identify the executor in the Discord Audit Logs (usually due to API lag), it will log a **Suspicious Event** warning instead of punishing a potentially innocent user. This is part of our **Confidence-First** security protocol.
+  </Accordion>
+
+  <Accordion title="Does Gacky-X support logging?">
+    Yes! Gacky-X features a comprehensive 7-channel logging system that tracks Messages, Members, Moderation, Security Alerts, Server Changes, and Voice movements. Run **`-autologs`** to set it up instantly.
+  </Accordion>
+
+  <Accordion title="How do I get support?">
+    Join our [Support Server](https://discord.gg/dEAu566Xxg) to speak with our developers or report issues.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,65 @@
+---
+title: "Moderation Tools"
+description: "Essential commands for staff to manage members and maintain order."
+---
+
+Gacky-X provides a full suite of moderation commands with built-in role hierarchy protection and automatic logging.
+
+## Standard Punishments
+
+<ResponseField name="-ban <@user|ID> [reason]" type="Command">
+  Permanently ban a user.
+  - **Example:** `-ban @Scammer malicious intent`
+</ResponseField>
+
+<ResponseField name="-kick <@user|ID> [reason]" type="Command">
+  Remove a user from the server.
+</ResponseField>
+
+<ResponseField name="-mute <@user|ID> [duration] [reason]" type="Command">
+  Timeout a user. Supports dynamic durations.
+  - **Example:** `-mute @User 1h stop spamming`
+</ResponseField>
+
+<ResponseField name="-warn <@user|ID> [reason]" type="Command">
+  Issue a formal warning to a user.
+</ResponseField>
+
+## Channel Management
+
+<CardGroup cols={2}>
+  <Card title="-lock [time]" icon="lock">
+    Lock the current channel. Supports timed locks (e.g. `-lock 30m`).
+  </Card>
+  <Card title="-unlock" icon="lock-open">
+    Unlock the current channel.
+  </Card>
+  <Card title="-lockall" icon="shield">
+    **DANGER:** Locks every text channel in the server instantly.
+  </Card>
+  <Card title="-unlockall" icon="door-open">
+    Restores access to all channels.
+  </Card>
+</CardGroup>
+
+## Bulk Actions
+
+### Purge (`-purge`)
+Bulk delete messages with advanced filtering.
+- **Usage:** `-purge <amount> [@user] [bot|link|embed]`
+- **Example:** `-purge 50 @User` (Deletes 50 messages from a specific user).
+
+### Mass Role (`-role`)
+Manage roles for entire groups of users.
+- **Usage:** `-role <humans|bots|everyone> <add|remove> @Role`
+- **Warning:** High-frequency role actions are queued to prevent rate limits.
+
+## Dynamic Durations
+
+Commands that support time (like `-mute` and `-lock`) accept the following formats:
+- `s`: Seconds
+- `m`: Minutes
+- `h`: Hours
+- `d`: Days (Max 28 days for timeouts)
+
+**Example:** `-timeout @User 2d 12h`

@@ -1,0 +1,33 @@
+---
+title: "Automod & AI"
+description: "Traditional filters vs. Artificial Intelligence."
+---
+
+Gacky-X combines high-speed regex filters with cutting-edge AI to provide a multi-layered chat defense.
+
+## The Traditional Filter (Fast & Free)
+
+The standard AutoMod (`-automod`) is your first line of defense. It handles:
+- **Spam:** Rapid-fire messages.
+- **Links:** Phishing and invite links.
+- **Bad Words:** Toxic language.
+
+These filters are **Instant** and do not cost any tokens.
+
+## The AI Shield (Smart & Deep)
+
+Standard filters are easily bypassed by using "leetspeak" or clever spacing. The AI Moderation (`-aimod`) understands **Context**.
+
+### What the AI Detects:
+- **Token Grabbers:** Malicious scripts hidden in messages.
+- **Coordinated Raids:** "Ghost" users joining to cause chaos.
+- **Advanced Toxicity:** Harassment that doesn't use obvious swear words.
+
+### Recommended AI Strategy:
+1.  **Start Flag-Only:** Run `-aimod` and set the action to **Flag**. Watch the alerts in your `security-logs` for 24 hours.
+2.  **Fine-Tune Confidence:** If the AI is too sensitive, increase the **Min Confidence** to `85%`.
+3.  **Activate Deletion:** Once you trust the AI's logic, set the action to **Delete** to clean chat automatically.
+
+<Warning>
+  **Privacy Note:** AI moderation only scans the content of the message. It never collects user emails, IP addresses, or private tokens.
+</Warning>

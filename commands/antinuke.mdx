@@ -1,0 +1,58 @@
+---
+title: "Antinuke Security"
+description: "High-level protection against unauthorized server changes and rogue staff."
+---
+
+The Antinuke module is the core of Gacky-X's defense system. It monitors every administrative action and stops "nuke" attempts before they can destroy your community.
+
+## Main Dashboard (`-antinuke`)
+
+Opens the interactive Antinuke terminal. You can toggle core shields like **Anti-Bot**, **Quarantine**, and **Auto-Restore** from here.
+
+## Trust Registry
+
+Manage who is allowed to control the security perimeter.
+
+### Security Admins
+<ResponseField name="-admin <add|remove|list|reset|cleanup> [user]" type="Command">
+  Manage staff members who can configure the bot.
+  - **Aliases:** `securityadmin`, `sa`
+  - **Permission:** Server Owner or Extra Owner
+  - **Example:** `-admin add @User`
+</ResponseField>
+
+### Extra Owners
+<ResponseField name="-extraowner <add|remove|list|reset> [user]" type="Command">
+  Manage high-tier users who bypass standard security protocols.
+  - **Aliases:** `eo`, `trustedowner`
+  - **Permission:** Primary Server Owner Only
+  - **Example:** `-extraowner add @User`
+</ResponseField>
+
+## Emergency Protocols
+
+### Panic Mode
+<ResponseField name="-panicmode <enable|disable>" type="Command">
+  Instantly locks down every critical permission in the server. Use this during an active nuke attempt.
+</ResponseField>
+
+### Night Mode
+<ResponseField name="-nightmode <enable|disable>" type="Command">
+  Stricter filters and thresholds for hours when your staff is less active.
+</ResponseField>
+
+## Whitelist System (`-whitelist`)
+
+Manage granular bypasses for specific actions.
+
+<Tip>
+  **Pro Tip:** Instead of whitelisting a moderator for "Everything," use the whitelist grid to allow them only to "Delete Channels" or "Create Roles."
+</Tip>
+
+<Warning>
+  **Warning:** Do not whitelist random users. Whitelisted users can bypass security checks and potentially damage the server.
+</Warning>
+
+- **Usage:** `-whitelist` (or `-wl`)
+- **Action Grid:** Interactive 3x4 button panel to toggle specific permissions.
+- **Support:** Supports both User-specific and Role-specific whitelisting.

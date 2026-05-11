@@ -1,0 +1,40 @@
+---
+title: "Utility Protocols"
+description: "General purpose tools for server info and user management."
+---
+
+Gacky-X includes a wide variety of utility tools for both staff and regular members.
+
+## User & Member Info
+
+<ResponseField name="-userinfo [@user]" type="Command">
+  Detailed lookup of a Discord user (creation date, badges, ID).
+</ResponseField>
+
+<ResponseField name="-profile [@user]" type="Command">
+  Displays a stylized card with the user's server join date, roles, and status.
+</ResponseField>
+
+<ResponseField name="-avatar [@user]" type="Command">
+  Fetches the high-resolution avatar of a user.
+</ResponseField>
+
+<ResponseField name="-banner [@user]" type="Command">
+  Fetches the profile banner of a user.
+</ResponseField>
+
+## Server Statistics
+
+- **`-serverinfo`**: View detailed server data (owner, creation date, boosts, security level).
+- **`-stats`**: View the bot's current performance metrics and shard info.
+- **`-membercount`**: Quick view of total members, humans, and bots.
+- **`-boostcount`**: Current server boost level and progression.
+
+## Tools & Builders
+
+- **`-afk [reason]`**: Set an AFK status that notifies users when they mention you.
+- **`-snipe`**: View the last deleted message in the current channel.
+- **`-poll <question> | <opt1> | <opt2>`**: Create an interactive reaction poll.
+- **`-autonick`**: Automated member nickname enforcement system.
+- **`-ping`**: Check the bot's heartbeat and API latency.
+- **`-uptime`**: See how long Gacky-X has been online since the last restart.

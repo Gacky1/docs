@@ -1,0 +1,35 @@
+---
+title: "Server Backups"
+description: "Gacky-X High-End Server Snapshot System."
+---
+
+Gacky-X allows you to create full snapshots of your server's configuration for emergency recovery.
+
+## Purpose
+
+The Backup system saves:
+*   Channel names, types, and categories.
+*   Role names, colors, and permissions.
+*   Category structures.
+
+## Commands
+
+### Create Backup (`-backup create`)
+Generates a unique **Backup ID**. 
+- **Storage:** Data is encrypted and stored in our secure database.
+- **Note:** Large servers may take a few seconds to process.
+
+### View Archives (`-backup list`)
+Displays a list of all saved snapshots for your server with their IDs and timestamps.
+
+### Restore Snapshot (`-backup restore <Backup-ID>`)
+**CRITICAL:** Restores the configuration from the specified snapshot.
+
+<Warning>
+  **Protocol Restriction:** Restoring a backup requires the **Administrator** permission. We recommend performing restores during low-activity hours as the bot will recreate many channels and roles.
+</Warning>
+
+## Important Notes
+
+*   **Role Hierarchy:** Gacky-X can only restore roles that are **below** its own highest role.
+*   **Member Data:** Backups do **not** store individual member messages or private data; they focus on server structure and security.

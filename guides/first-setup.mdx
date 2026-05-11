@@ -1,0 +1,42 @@
+---
+title: "First Server Setup"
+description: "The recommended workflow for new Gacky-X servers."
+---
+
+Welcome to the Gacky-X community! Follow this guide to turn your server from "Open" to "Fortified" in under 5 minutes.
+
+## Step 1: Baseline Permissions
+After inviting the bot, your first priority is the **Role Hierarchy**.
+1.  Go to **Server Settings > Roles**.
+2.  Find the **Gacky-X** role.
+3.  Drag it to the **very top** (or as high as possible).
+4.  This ensures Gacky-X can moderate your staff and protect your highest roles.
+
+## Step 2: Surveillance Deployment
+You cannot secure what you cannot see. Initialize your log channels immediately:
+1.  Type **`-setup`**.
+2.  Click **Initialize Logs** (or run `-autologs`).
+3.  This creates the `GACKY LOGS` category. Your audit trail is now live.
+
+## Step 3: Perimeter Defense
+Enable the core Antinuke protection to prevent rogue admins from damaging the server.
+1.  Type **`-antinuke`**.
+2.  Click **Enable** on the **Main Shield**.
+3.  Set your thresholds using **`-thresholds`** (we recommend starting with the default "Medium" values).
+
+## Step 4: Chat Purification
+Setup Automod to handle spam and toxic content automatically.
+1.  Type **`-automod`**.
+2.  Enable **Anti-Spam**, **Anti-Link**, and **Anti-Invite**.
+3.  Set the punishment to `TIMEOUT` for a safe start.
+
+## Step 5: Verify Your Health
+Finally, run the security scan to see if you missed anything:
+```txt
+-securityscore
+```
+If your score is below 80, check the "Failed Checks" section of the card and adjust your server settings accordingly.
+
+<Card title="Security Registry Guide" icon="users-gear" href="/guides/security-registry">
+  Next: Learn how to add your co-owners and trusted staff to the bot's whitelist.
+</Card>

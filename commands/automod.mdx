@@ -1,0 +1,56 @@
+---
+title: "Automod Protocols"
+description: "Automated high-speed message filtering and behavior enforcement."
+---
+
+Gacky-X features a modular Automod system that scans every message to keep your chat clean and safe.
+
+## Automod Dashboard (`-automod`)
+
+The central hub to manage all chat filters. Use the buttons to toggle modules or the dropdown to configure punishments.
+
+## Core Filters
+
+<AccordionGroup>
+  <Accordion title="Anti-Spam">
+    Detects and blocks rapid message spam, duplicate messages, and mass mentions.
+    - **Command:** `-antispam <enable|disable|punishment|config>`
+  </Accordion>
+
+  <Accordion title="Anti-Link">
+    Blocks unauthorized external links. Features built-in phishing and scam detection.
+    - **Command:** `-antilink <enable|disable|punishment|config>`
+  </Accordion>
+
+  <Accordion title="Anti-Invite">
+    Blocks Discord invite links to other servers.
+    - **Command:** `-antiinvite <enable|disable|punishment|config>`
+  </Accordion>
+
+  <Accordion title="Anti-Caps">
+    Automatically filters messages containing excessive capital letters.
+    - **Command:** `-anticaps <enable|disable|punishment|config>`
+  </Accordion>
+
+  <Accordion title="Anti-Emoji Spam">
+    Prevents "emoji-wall" messages that clutter chat.
+    - **Command:** `-antiemojispam <enable|disable|punishment|config>`
+  </Accordion>
+
+  <Accordion title="Anti-Swear">
+    Filters toxic language and custom blacklisted words.
+    - **Command:** `-antiswear <enable|disable|punishment|config>`
+  </Accordion>
+</AccordionGroup>
+
+## Punishments
+
+You can configure what Gacky-X does when a filter is triggered:
+- **WARN:** Logs a warning for the user.
+- **TIMEOUT:** Temporarily silences the user (Default).
+- **KICK:** Removes the user from the server.
+- **BAN:** Permanently removes the user.
+
+## Whitelisting
+
+Staff members registered via `-admin` or `-extraowner` automatically bypass these filters. You can also whitelist specific channels, roles, or users via the `-automod` dashboard.

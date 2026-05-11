@@ -1,0 +1,48 @@
+---
+title: "Permissions"
+description: "Understanding the hierarchy and access levels of Gacky-X."
+---
+
+## Bot Permissions
+
+For Gacky-X to effectively protect your server, it requires several high-level permissions. We recommend granting the **Administrator** permission to ensure the Antinuke system can manage channels and roles during an emergency.
+
+### Required Permissions Table
+
+| Permission | Reason |
+| :--- | :--- |
+| **Manage Roles** | Required to restore roles, quarantine users, and assign autoroles. |
+| **Manage Channels** | Required to lock down the server and restore deleted channels. |
+| **Ban Members** | Required for the Antinuke to stop malicious actors. |
+| **Kick Members** | Required for Anti-Bot and Anti-Raid protections. |
+| **View Audit Log** | **CRITICAL:** Used to identify the executors of "nuke" actions. |
+| **Manage Messages** | Required for `-purge` and deleting spam/scam links. |
+| **Moderate Members** | Required for AI-based and Automod timeouts. |
+
+## Role Hierarchy
+
+In Discord, no bot can moderate a user who has a role **equal to or higher** than the bot's own highest role.
+
+<Warning>
+  **Move Gacky-X to the Top:** To ensure 100% security, go to **Server Settings > Roles** and drag the **Gacky-X** role to the very top. If Gacky-X is below your staff roles, it **cannot** punish them if their account is compromised.
+</Warning>
+
+## Access Tiers
+
+Gacky-X uses a custom internal hierarchy to manage who can control its settings:
+
+### 1. Primary Server Owner
+The person who created the server. They have **Total Control** and can never be punished by the bot. They are the only ones who can manage **Extra Owners**.
+
+### 2. Extra Owners (`-extraowner`)
+The most trusted co-owners. They bypass all AutoMod filters and can manage **Security Admins**. They are still monitored by Antinuke but can be whitelisted for specific actions.
+
+### 3. Security Admins (`-admin`)
+Staff members who can configure the bot (`-setup`, `-automod`, etc.). They bypass AutoMod filters but are strictly monitored by the Antinuke system.
+
+### 4. Whitelisted Users/Roles (`-whitelist`)
+Trusted entities who have been given permission to perform specific actions (like "Channel Deletion") that would normally trigger the Antinuke.
+
+<Tip>
+  Use the **`-whitelist`** grid to grant granular permissions instead of whitelisting someone for everything.
+</Tip>

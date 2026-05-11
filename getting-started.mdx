@@ -1,0 +1,56 @@
+---
+title: "Getting Started"
+description: "Deploy Gacky-X security to your server in minutes."
+---
+
+## Quick Setup Steps
+
+Follow these steps to initialize the core security infrastructure for your community.
+
+<Steps>
+  <Step title="Invite the Bot">
+    Invite Gacky-X to your server using an authorized invite link. Ensure the bot has **Administrator** or high-level permissions for full functionality.
+  </Step>
+  <Step title="Configure Role Hierarchy">
+    **CRITICAL:** Go to Server Settings > Roles and drag the **Gacky-X** role to the **very top** of the list. 
+    
+    <Warning>
+      The bot cannot punish, ban, kick, or restore roles for any user with a role equal to or higher than its own.
+    </Warning>
+  </Step>
+  <Step title="Initialize Logs">
+    Run the setup command to deploy your surveillance infrastructure:
+    ```txt
+    -setup
+    ```
+    Click **Initialize Logs** or run `-autologs` to automatically create all necessary log channels.
+  </Step>
+  <Step title="Activate Security Shields">
+    Open the Antinuke and Automod dashboards to enable protection:
+    ```txt
+    -antinuke
+    -automod
+    ```
+  </Step>
+  <Step title="Scan Server Health">
+    Check your server's current security posture:
+    ```txt
+    -securityscore
+    ```
+  </Step>
+</Steps>
+
+## Recommended First Actions
+
+1.  **Set Admin Roles:** Use `-admin add @User` to authorize trusted staff members.
+2.  **Add Extra Owners:** Use `-extraowner add @User` for your co-owners to bypass protocols.
+3.  **Setup Verification:** Run `-verification` to enable an entry gate and stop automated raids.
+4.  **Test the Filters:** Run `-automod` and toggle the Spam and Link filters to **Active**.
+
+## Pro Tip: Interactive Dashboards
+
+Most Gacky-X commands open **Interactive Dashboards**. These panels are stateless, meaning if the bot restarts, the buttons will still work! Use them to manage complex settings without typing long commands.
+
+<Tip>
+  Need help with a specific command? Type `-help <command_name>` for detailed syntax and examples.
+</Tip>

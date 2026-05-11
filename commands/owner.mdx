@@ -1,0 +1,27 @@
+---
+title: "Developer & Owner Commands"
+description: "Internal systems for bot developers and global management."
+---
+
+Owner-only commands are restricted to the IDs listed in the bot's configuration (`BOT_OWNER_IDS`).
+
+## Global Management (`-owner`)
+
+The main dashboard for bot developers to manage the entire Gacky-X network.
+- **Maintenance Mode:** Toggle global maintenance to prevent command execution during updates.
+- **Global Broadcast:** Send an alert to every server's owner or log channel.
+- **Blacklist Management:** Add malicious users or guilds to the Global Blacklist.
+
+## Threat Intelligence
+
+### Seed Globals (`-seedglobals`)
+Used by developers to sync the latest global threat definitions (blocked words, phishing domains, and known raiders) to the central database.
+
+## Premium Management (`-premium`)
+
+Used to manage server subscription tiers.
+- **Features:** Set expiry dates, toggle plans, and view usage statistics.
+
+<Note>
+  **Safety Note:** These commands bypass all local server permissions. Access is strictly limited to authorized bot developers.
+</Note>

@@ -1,0 +1,34 @@
+---
+title: "Troubleshooting"
+description: "Fixing common issues with Gacky-X."
+---
+
+## 1. Bot is not responding to commands
+- **Check Prefix:** Ensure you are using the correct prefix (**`-`**).
+- **Intents:** If self-hosting, ensure **Message Content Intent** is enabled.
+- **Permissions:** Ensure the bot has **View Channel** and **Send Messages** in that specific room.
+- **AFK Check:** Check if the bot is in **Maintenance Mode** by running `-stats`.
+
+## 2. Antinuke did not punish someone
+- **Role Hierarchy:** Check if the user has a role higher than the bot.
+- **Whitelist:** Check if the user or their roles are whitelisted via `-whitelist`.
+- **Thresholds:** Check if the user exceeded the limit (e.g., they only deleted 2 channels but the limit was 3).
+- **Confidence:** Check `security-logs`. If the bot couldn't reliably find the executor, it skipped the punishment.
+
+## 3. Logs are not sending
+- **Configuration:** Run `-showlogs` to see if a channel is set.
+- **Permissions:** The bot needs **Send Messages** and **Embed Links** in the log channel.
+- **Deleted Channels:** If you deleted a log channel, you must set a new one or run `-autologs` again.
+
+## 4. Custombot avatar failed to update
+- **File Size:** Ensure the image is under **8MB**.
+- **Format:** Use standard PNG or JPG.
+- **Discord API:** Profile updates are heavily rate-limited by Discord. Wait 5 minutes and try again.
+
+## 5. "Access Denied" on dashboard buttons
+- **Ownership:** Dashboard buttons are **User-Locked**. Only the person who typed the command can click the buttons.
+- **Permissions:** Ensure you have the `Manage Server` or `Administrator` permission.
+
+## 6. Database/Redis Errors
+- **Connection:** Ensure your PostgreSQL and Redis services are active.
+- **Schema:** If you recently updated the bot, run `npx prisma db push` to sync the database.

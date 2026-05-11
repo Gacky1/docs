@@ -1,0 +1,55 @@
+---
+title: "Verification System"
+description: "Secure entry gates to protect against automated raids."
+---
+
+Stop bots and raiders before they can see your server's content.
+
+## Verification Dashboard (`-verification`)
+
+Use the interactive dashboard to setup and manage your entry gate.
+
+### Verification Methods
+
+<CardGroup cols={3}>
+  <Card title="BUTTON" icon="mouse-pointer">
+    Easiest for users. Just click to verify.
+  </Card>
+  <Card title="MATH" icon="calculator">
+    Solve a random math equation in a popup modal.
+  </Card>
+  <Card title="TEXT" icon="font">
+    Type a specific code shown in a generated image.
+  </Card>
+</CardGroup>
+
+## Setup Guide
+
+<Steps>
+  <Step title="Set Success Role">
+    Choose which role users receive after verifying:
+    ```txt
+    -vsetup role @Verified
+    ```
+  </Step>
+  <Step title="Set Channel">
+    Choose where the verification prompt will appear:
+    ```txt
+    -vsetup channel #verify-here
+    ```
+  </Step>
+  <Step title="Activate">
+    Toggle the system to **Active** in the dashboard.
+  </Step>
+</Steps>
+
+## Pro-Configuration
+
+To make verification 100% effective:
+1.  Set your `@everyone` role's permissions to **View Channels: DISABLED** for all rooms.
+2.  Enable **View Channels: ENABLED** for your `#verify-here` channel only.
+3.  Users will only be able to see the rest of your server once they complete the bot's challenge.
+
+<Warning>
+  **Safety Note:** Gacky-X uses instant modals for MATH and TEXT verification. This allows the process to be fast and prevents Discord interaction timeouts.
+</Warning>

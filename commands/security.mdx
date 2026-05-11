@@ -1,0 +1,34 @@
+---
+title: "Security & Analytics"
+description: "Advanced scanning, AI moderation, and incident tracking."
+---
+
+## Security Score (`-securityscore`)
+
+Gacky-X performs a deep-scan of your server's permissions, hierarchy, and bot configuration to generate a health rating from **0 to 100**.
+- **Passed Checks:** What you are doing correctly.
+- **Failed Checks:** Potential vulnerabilities.
+- **Rating:** Excellent, Good, Average, Weak, or Critical.
+
+## AI Moderation (`-aimod`)
+
+State-of-the-art message analysis to stop threats that traditional filters miss.
+- **Usage:** `-aimod <enable|disable|status|test>`
+- **Detections:** Token Grabbers, Malicious Scripts, Coordinated Raids, Toxicity.
+- **Safety:** Always starts in **Flag-Only** mode to prevent accidental deletions.
+
+<Note>
+  AI Moderation requires an external API key (OpenAI/Mistral) configured in the bot's environment.
+</Note>
+
+## Incident Reports (`-incidents`)
+
+Every major security event is assigned a unique **GX-ID** (e.g., `GX-2026-F42D`).
+- **Commands:** `-incidents list`, `-incidents info <GX-ID>`, `-incidents close <GX-ID>`.
+- **Details:** Includes executor, timestamp, severity, confidence level, and actions taken.
+
+## Analytics Dashboard (`-analytics`)
+
+View real-time statistics of your server's security activity.
+- **Stats:** Total messages scanned, spam blocked, antinuke triggers, and more.
+- **Filters:** View data for **Today**, **Weekly**, or **Monthly**.

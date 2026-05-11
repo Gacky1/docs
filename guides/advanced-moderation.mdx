@@ -1,0 +1,33 @@
+---
+title: "Advanced Moderation"
+description: "Power-user tools for high-frequency management."
+---
+
+Gacky-X is built for scale. When you need to manage thousands of users, these advanced tools become essential.
+
+## Mass-Role System
+
+Managing roles manually for 500+ users is impossible. Use the Mass-Role queue:
+- **` -role humans add @Verified`**: Queues a task to add a role to every non-bot member.
+- **` -role bots remove @OldAccess`**: Queues a task for all bots.
+
+<Note>
+  Mass-role actions are processed with a 250ms delay per user to ensure your bot does not get rate-limited by Discord.
+</Note>
+
+## High-Precision Purge
+
+The `-purge` command in Gacky-X is not just for counting:
+- **`-purge 100 @User`**: Only deletes messages from a specific target.
+- **`-purge 50 link`**: Removes the last 50 messages containing external links.
+- **`-purge 20 bot`**: Cleans up commands from other bots.
+
+## Timed Controls
+
+Never forget to "unlock" your server again. Use timed durations for everything:
+- **`-lock 2h`**: Locks the channel for two hours, then unlocks it automatically.
+- **`-timeout @User 3d`**: Uses Discord's native timeout feature for 3 days.
+
+## Interaction Confirmations
+
+Dangerous commands (like `-lockall` or `-backup restore`) will trigger a **Confirmation Button**. These buttons are **Stateless**, meaning they will still work even if the bot is restarted while the confirmation is pending.

@@ -1,0 +1,40 @@
+---
+title: "Activity Logging"
+description: "Comprehensive audit trails and surveillance channels."
+---
+
+Keep track of everything happening in your server with our 7-channel logging system.
+
+## Logging Dashboard (`-logs`)
+
+The central hub to view your current surveillance status. 
+
+### Auto-Setup (`-autologs`)
+We highly recommend running this command once during server setup.
+- **Action:** Creates a category `GACKY LOGS` and 7 private channels.
+- **Channels Created:**
+    1. `message-logs`: Message edits and deletions.
+    2. `member-logs`: Joins, leaves, and nickname changes.
+    3. `mod-logs`: Manual staff actions (Bans, Mutes, Warns).
+    4. `security-logs`: Antinuke and Anti-Raid triggers.
+    5. `role-logs`: Role creation, deletion, and updates.
+    6. `channel-logs`: Channel changes.
+    7. `voice-logs`: VC joins, moves, and leaves.
+
+## Manual Configuration
+
+If you prefer to use your own channels, use these commands:
+- `-messagelog <#channel>`
+- `-memberlog <#channel>`
+- `-modlog <#channel>`
+- `-rolelog <#channel>`
+- `-channellog <#channel>`
+- `-serverlog <#channel>`
+- `-vclog <#channel>`
+
+## Status Check (`-showlogs`)
+Displays exactly which channel is bound to which logging module.
+
+<Warning>
+  **Permission Requirement:** Gacky-X must have the **Send Messages** and **Embed Links** permissions in every log channel to report activity.
+</Warning>
